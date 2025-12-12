@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Term Proje - Yagmur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">GEO101E</div>
+        <nav>
+            <a href="javascript:void(0);" onclick="sayfaGecis('sayfa1')">Home</a>
+            <a href="javascript:void(0);" onclick="sayfaGecis('sayfa2')">Coordinate Rotation</a>
+            <a href="javascript:void(0);" onclick="sayfaGecis('sayfa3')">Matrix Calculation</a>
+        </nav>
+    </header>
+
+    <div id="sayfa1" class="sayfa-alani">
+        <div class="orta-kutu">
+            <img src="me1.jpg.jfif" class="profil-foto" alt="ben">
+            <h1>Yağmur Görgün</h1>
+            <h5>Student Number: 010240517</h5>
+            <p>About me: My name is Yağmur, and I'm a first-year student at Istanbul Technical University. I'm studying Geomatics Engineering. My goal in creating this website is to submit and successfully pass the term project in my GEO101E course.</p>
+            
+            <p><strong>Teachers: Mustafa Fahri Karabulut, Esra Günaydın Dağ</strong></p>
+            
+            <div class="ikonlar">
+                <a href="https://www.linkedin.com/in/ya%C4%9Fmur-g%C3%B6rg%C3%BCn-709852320/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yagmurgor50-code" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="sayfa2" class="sayfa-alani" style="display: none;">
+        <div class="orta-kutu hesap-kutusu"> 
+            <h2>Coordinate Rotation</h2>
+            <p>Rotate a point (x,y) around the origin.</p>
+            
+            <div class="form-kismi">
+                <label>Point X:</label>
+                <input type="text" id="inp_x" placeholder="100"> 
+                
+                <label>Point Y:</label>
+                <input type="text" id="inp_y" placeholder="50">
+                
+                <label>Angle (Degree):</label>
+                <input type="text" id="inp_aci" placeholder="45">
+
+                <button onclick="donusumYap()" class="btn-hesapla">Rotate Point</button>
+
+                <div id="sonuc_kutu_1" style="display:none; border:1px solid orange; margin-top:10px; padding:10px;">
+                    <h4>Result Coordinates:</h4>
+                    X': <span id="res_x">0</span> <br>
+                    Y': <span id="res_y">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sayfa3" class="sayfa-alani" style="display: none;">
+        <div class="orta-kutu hesap-kutusu">
+            <h2>Matrix Calc (2x2)</h2>
+            <p>Multiply two (2x2) matrices (A × B).</p>
+
+            <div class="form-kismi">
+                <label>Matrix A:</label> <br>
+                <input type="text" id="a_11" class="kucuk-input"> <input type="text" id="a_12" class="kucuk-input"> <br>
+                <input type="text" id="a_21" class="kucuk-input"> <input type="text" id="a_22" class="kucuk-input">
+                
+                <br><br>
+                
+                <label>Matrix B:</label> <br>
+                <input type="text" id="b_11" class="kucuk-input"> <input type="text" id="b_12" class="kucuk-input"> <br>
+                <input type="text" id="b_21" class="kucuk-input"> <input type="text" id="b_22" class="kucuk-input">
+
+                <br>
+                <button onclick="matrisHesapla()" class="btn-hesapla">Multiply Matrices</button>
+
+                <div id="sonuc_kutu_2" style="display:none; border:1px solid orange; margin-top:10px; padding:10px;">
+                    <h4>Result Matrix (C):</h4>
+                    <span id="c_11" class="sonuc-span">0</span> <span id="c_12" class="sonuc-span">0</span> <br>
+                    <span id="c_21" class="sonuc-span">0</span> <span id="c_22" class="sonuc-span">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
